@@ -1,0 +1,10 @@
+kvstore:
+  build: .
+  ports:
+    - "4001:4001"
+  command: tail -f /dev/null
+  environment:
+    - MIX_ENV=dev
+    - PORT=4001
+  volumes:
+    - .:/app
